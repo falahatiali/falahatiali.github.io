@@ -3,68 +3,270 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - CV</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css"> <!-- We'll create this next -->
+    <title>Ali Falahati - PHP Developer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container mt-5">
-        <header class="text-center mb-5">
-            <h1>Your Full Name</h1>
-            <p class="lead">Your Job Title | Your Location | Email: your.email@example.com | Phone: +1-123-456-7890</p>
+    <div class="container">
+        <!-- Header Section -->
+        <header class="header">
+            <div class="profile-section">
+                <div class="profile-image">
+                    <img src="https://via.placeholder.com/120x120/4A90E2/FFFFFF?text=AF" alt="Ali Falahati" id="profile-img">
+                </div>
+                <div class="profile-info">
+                    <h1 class="name">Ali Falahati</h1>
+                    <p class="title">PHP Developer</p>
+                </div>
+            </div>
         </header>
 
-        <section id="education" class="mb-5">
-            <h2>Education</h2>
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">Degree Name</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">University Name, Year - Year</h6>
-                    <p class="card-text">Brief description or GPA.</p>
-                </div>
-            </div>
-        </section>
+        <div class="main-content">
+            <!-- Left Column -->
+            <div class="left-column">
+                <!-- Experience Section -->
+                <section class="section">
+                    <h2 class="section-title">
+                        <i class="fas fa-briefcase"></i>
+                        Experiences
+                    </h2>
+                    
+                    <div class="experience-item">
+                        <div class="experience-header">
+                            <h3>PHP Developer</h3>
+                            <span class="company">Sdui.de, Berlin</span>
+                            <span class="duration">April 2023 – July 2023</span>
+                        </div>
+                        <ul class="responsibilities">
+                            <li>Implemented automated unit and integration tests to ensure code quality and reduce the risk of bugs.</li>
+                        </ul>
+                    </div>
 
-        <section id="experience" class="mb-5">
-            <h2>Experience</h2>
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">Job Title</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">Company Name, Dates</h6>
-                    <p class="card-text">Key responsibilities and achievements.</p>
-                </div>
-            </div>
-            <!-- Add more cards for additional jobs -->
-        </section>
-
-        <section id="skills" class="mb-5">
-            <h2>Skills</h2>
-            <ul class="list-group">
-                <li class="list-group-item">Skill 1</li>
-                <li class="list-group-item">Skill 2</li>
-                <!-- Add more -->
-            </ul>
-        </section>
-
-        <section id="projects" class="mb-5">
-            <h2>Projects</h2>
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Project Name</h5>
-                            <p class="card-text">Description and link.</p>
+                    <div class="experience-item">
+                        <div class="experience-header">
+                            <h3>PHP Developer</h3>
+                            <span class="company">Unitedprint.com SE, Dresden</span>
+                            <span class="duration">October 2021 – January 2023</span>
+                        </div>
+                        <ul class="responsibilities">
+                            <li>Refactored existing codebase to improve code readability and maintainability.</li>
+                            <li>Implemented automated unit and integration tests to ensure code quality and reduce the risk of bugs.</li>
+                        </ul>
+                        <div class="technologies">
+                            <span class="tech-tag">PHP</span>
+                            <span class="tech-tag">Laravel</span>
+                            <span class="tech-tag">MySQL</span>
+                            <span class="tech-tag">Redis</span>
+                            <span class="tech-tag">Docker</span>
                         </div>
                     </div>
-                </div>
-                <!-- Add more columns for projects -->
-            </div>
-        </section>
 
-        <footer class="text-center">
-            <p>&copy; 2025 Your Name. Built with HTML/CSS.</p>
-        </footer>
+                    <div class="experience-item">
+                        <div class="experience-header">
+                            <h3>PHP Developer</h3>
+                            <span class="company">Jiring.ir, Tehran, Iran</span>
+                            <span class="duration">August 2020 – October 2021</span>
+                        </div>
+                        <ul class="responsibilities">
+                            <li>Working on Jiring.ir main application payment API and main internal reporting application based on PHP.</li>
+                            <li>Working in the DevOps research team and responsible to find a solution for having new technologies in the old PHP projects.</li>
+                            <li>Designed and implemented a caching system that reduced page load times by 15%.</li>
+                        </ul>
+                    </div>
+
+                    <div class="experience-item">
+                        <div class="experience-header">
+                            <h3>PHP Developer</h3>
+                            <span class="company">Dataak.com, Tehran, Iran</span>
+                            <span class="duration">September 2019 – August 2020</span>
+                        </div>
+                        <ul class="responsibilities">
+                            <li>Work on various different databases and design APIs for getting data.</li>
+                            <li>Work on CI/CD pipeline with the DevOps team.</li>
+                        </ul>
+                        <div class="technologies">
+                            <span class="tech-tag">PHP</span>
+                            <span class="tech-tag">Laravel</span>
+                            <span class="tech-tag">Lumen</span>
+                            <span class="tech-tag">MariaDB</span>
+                            <span class="tech-tag">Apache Solr</span>
+                            <span class="tech-tag">Redis</span>
+                            <span class="tech-tag">Kafka</span>
+                        </div>
+                    </div>
+
+                    <div class="experience-item">
+                        <div class="experience-header">
+                            <h3>PHP Developer</h3>
+                            <span class="company">Jiring.ir, Tehran, Iran</span>
+                            <span class="duration">August 2016 – June 2019</span>
+                        </div>
+                        <ul class="responsibilities">
+                            <li>Design APIs for e-wallet system in Jiring.</li>
+                            <li>Design reporting panels for internal and external B2B customers.</li>
+                        </ul>
+                        <div class="technologies">
+                            <span class="tech-tag">Laravel</span>
+                            <span class="tech-tag">MySQL</span>
+                            <span class="tech-tag">Docker</span>
+                            <span class="tech-tag">Redis</span>
+                            <span class="tech-tag">Oracle</span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Education Section -->
+                <section class="section">
+                    <h2 class="section-title">
+                        <i class="fas fa-graduation-cap"></i>
+                        Education
+                    </h2>
+                    
+                    <div class="education-item">
+                        <h3>BSc, Isfahan University</h3>
+                        <span class="location">Isfahan, Iran</span>
+                        <span class="duration">January 2009 – January 2013</span>
+                        <p class="thesis">Thesis: "Integration of Clustering in the E-Market of High-Speed Internet Services in Isfahan Province."</p>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Right Column -->
+            <div class="right-column">
+                <!-- Details Section -->
+                <section class="section">
+                    <h2 class="section-title">Details</h2>
+                    <div class="details">
+                        <div class="detail-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Dresden, Germany</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+4917688266931</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:falaahatiali@gmail.com">falaahatiali@gmail.com</a>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Links Section -->
+                <section class="section">
+                    <h2 class="section-title">Links</h2>
+                    <div class="links">
+                        <a href="#" class="link-item">
+                            <i class="fab fa-github"></i>
+                            <span>Github</span>
+                        </a>
+                        <a href="#" class="link-item">
+                            <i class="fab fa-linkedin"></i>
+                            <span>LinkedIn</span>
+                        </a>
+                        <a href="#" class="link-item">
+                            <i class="fab fa-stack-overflow"></i>
+                            <span>StackOverflow</span>
+                        </a>
+                    </div>
+                </section>
+
+                <!-- Skills Section -->
+                <section class="section">
+                    <h2 class="section-title">Skills</h2>
+                    <div class="skills">
+                        <div class="skill-item">
+                            <span class="skill-name">PHP</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Laravel</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">MySQL</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Redis</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Docker</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Nginx</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Apache Solr</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 70%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Linux</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Python</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 65%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">HTML & CSS</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Kafka</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 70%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Inertia.js</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 60%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Hobbies Section -->
+                <section class="section">
+                    <h2 class="section-title">Hobbies</h2>
+                    <div class="hobbies">
+                        <span class="hobby-tag">Technologies</span>
+                        <span class="hobby-tag">Open source</span>
+                        <span class="hobby-tag">Nature</span>
+                        <span class="hobby-tag">Swimming</span>
+                        <span class="hobby-tag">Reading books</span>
+                    </div>
+                </section>
+            </div>
+        </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="script.js"></script>
 </body>
 </html>
