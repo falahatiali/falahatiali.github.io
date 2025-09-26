@@ -26,13 +26,13 @@ body {
 
 /* Header Styles */
 .header {
-    margin-bottom: 2rem;
-    padding-bottom: 1.5rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
     border-bottom: 2px solid #4A90E2;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 2rem;
+    align-items: start;
 }
 
 .profile-section {
@@ -121,23 +121,52 @@ body {
 .social-link {
     display: flex;
     align-items: center;
-    gap: 0.3rem;
-    color: #4A90E2;
+    gap: 0.4rem;
+    color: white;
     text-decoration: none;
     font-size: 0.85rem;
+    font-weight: 500;
     transition: all 0.3s ease;
-    padding: 0.3rem 0.6rem;
-    border-radius: 15px;
-    background: rgba(74, 144, 226, 0.1);
+    padding: 0.5rem 0.8rem;
+    border-radius: 20px;
+    background: linear-gradient(135deg, #4A90E2, #357ABD);
+    box-shadow: 0 3px 10px rgba(74, 144, 226, 0.3);
 }
 
 .social-link:hover {
-    background: rgba(74, 144, 226, 0.2);
-    transform: translateY(-1px);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(74, 144, 226, 0.4);
+}
+
+.social-link.github {
+    background: linear-gradient(135deg, #333, #24292e);
+    box-shadow: 0 3px 10px rgba(51, 51, 51, 0.3);
+}
+
+.social-link.github:hover {
+    box-shadow: 0 5px 15px rgba(51, 51, 51, 0.4);
+}
+
+.social-link.linkedin {
+    background: linear-gradient(135deg, #0077b5, #005885);
+    box-shadow: 0 3px 10px rgba(0, 119, 181, 0.3);
+}
+
+.social-link.linkedin:hover {
+    box-shadow: 0 5px 15px rgba(0, 119, 181, 0.4);
+}
+
+.social-link.stackoverflow {
+    background: linear-gradient(135deg, #f48024, #d2691e);
+    box-shadow: 0 3px 10px rgba(244, 128, 36, 0.3);
+}
+
+.social-link.stackoverflow:hover {
+    box-shadow: 0 5px 15px rgba(244, 128, 36, 0.4);
 }
 
 .social-link i {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
 }
 
 /* Main Content Layout */
@@ -149,7 +178,7 @@ body {
 
 /* Section Styles */
 .section {
-    margin-bottom: 1.8rem;
+    margin-bottom: 1.2rem;
 }
 
 .section-title {
@@ -183,9 +212,9 @@ body {
 /* Experience Styles */
 .experience-item {
     background: #f8f9fa;
-    border-radius: 8px;
-    padding: 1.2rem;
-    margin-bottom: 1.2rem;
+    border-radius: 6px;
+    padding: 1rem;
+    margin-bottom: 0.8rem;
     border-left: 3px solid #4A90E2;
     transition: all 0.3s ease;
     position: relative;
@@ -416,6 +445,18 @@ body {
     color: #2c3e50;
     min-width: 120px;
     font-size: 0.9rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.skill-years {
+    font-size: 0.75rem;
+    color: #4A90E2;
+    font-weight: 600;
+    background: rgba(74, 144, 226, 0.1);
+    padding: 0.2rem 0.5rem;
+    border-radius: 10px;
 }
 
 .skill-bar {
@@ -486,7 +527,7 @@ body {
     }
     
     .header {
-        flex-direction: column;
+        grid-template-columns: 1fr;
         gap: 1.5rem;
     }
     
