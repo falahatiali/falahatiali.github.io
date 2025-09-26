@@ -111,10 +111,10 @@ document.addEventListener('DOMContentLoaded', function() {
         container.style.transform = 'scale(1)';
     }, 100);
     
-    // Add print functionality
-    const printButton = document.createElement('button');
-    printButton.innerHTML = '<i class="fas fa-print"></i> Print Resume';
-    printButton.style.cssText = `
+    // Add PDF export functionality
+    const exportButton = document.createElement('button');
+    exportButton.innerHTML = '<i class="fas fa-download"></i> Export PDF';
+    exportButton.style.cssText = `
         position: fixed;
         top: 20px;
         right: 20px;
@@ -130,18 +130,67 @@ document.addEventListener('DOMContentLoaded', function() {
         z-index: 1000;
     `;
     
+    exportButton.addEventListener('click', () => {
+        // Add html2pdf library dynamically
+        const script = document.createElement('script');
+        script.src = 'https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js';
+        script.onload = () => {
+            const element = document.querySelector('.container');
+            const opt = {
+                margin: 0.5,
+                filename: 'Ali_Falahati_Resume.pdf',
+                image: { type: 'jpeg', quality: 0.98 },
+                html2canvas: { scale: 2 },
+                jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
+            };
+            html2pdf().set(opt).from(element).save();
+        };
+        document.head.appendChild(script);
+    });
+    
+    exportButton.addEventListener('mouseenter', function() {
+        this.style.transform = 'scale(1.05)';
+        this.style.boxShadow = '0 8px 25px rgba(74, 144, 226, 0.4)';
+    });
+    
+    exportButton.addEventListener('mouseleave', function() {
+        this.style.transform = 'scale(1)';
+        this.style.boxShadow = '0 5px 15px rgba(74, 144, 226, 0.3)';
+    });
+    
+    document.body.appendChild(exportButton);
+    
+    // Add print functionality
+    const printButton = document.createElement('button');
+    printButton.innerHTML = '<i class="fas fa-print"></i> Print';
+    printButton.style.cssText = `
+        position: fixed;
+        top: 20px;
+        right: 140px;
+        background: linear-gradient(135deg, #28a745, #20c997);
+        color: white;
+        border: none;
+        padding: 12px 20px;
+        border-radius: 25px;
+        cursor: pointer;
+        font-weight: 500;
+        box-shadow: 0 5px 15px rgba(40, 167, 69, 0.3);
+        transition: all 0.3s ease;
+        z-index: 1000;
+    `;
+    
     printButton.addEventListener('click', () => {
         window.print();
     });
     
     printButton.addEventListener('mouseenter', function() {
         this.style.transform = 'scale(1.05)';
-        this.style.boxShadow = '0 8px 25px rgba(74, 144, 226, 0.4)';
+        this.style.boxShadow = '0 8px 25px rgba(40, 167, 69, 0.4)';
     });
     
     printButton.addEventListener('mouseleave', function() {
         this.style.transform = 'scale(1)';
-        this.style.boxShadow = '0 5px 15px rgba(74, 144, 226, 0.3)';
+        this.style.boxShadow = '0 5px 15px rgba(40, 167, 69, 0.3)';
     });
     
     document.body.appendChild(printButton);

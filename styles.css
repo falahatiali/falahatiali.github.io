@@ -26,15 +26,19 @@ body {
 
 /* Header Styles */
 .header {
-    margin-bottom: 3rem;
-    padding-bottom: 2rem;
-    border-bottom: 3px solid #4A90E2;
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 2px solid #4A90E2;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
 }
 
 .profile-section {
     display: flex;
     align-items: center;
-    gap: 2rem;
+    gap: 1.5rem;
 }
 
 .profile-image {
@@ -42,12 +46,12 @@ body {
 }
 
 .profile-image img {
-    width: 120px;
-    height: 120px;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
     object-fit: cover;
-    border: 4px solid #4A90E2;
-    box-shadow: 0 10px 30px rgba(74, 144, 226, 0.3);
+    border: 3px solid #4A90E2;
+    box-shadow: 0 8px 25px rgba(74, 144, 226, 0.2);
     transition: transform 0.3s ease;
 }
 
@@ -60,10 +64,10 @@ body {
 }
 
 .name {
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: 700;
     color: #2c3e50;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.3rem;
     background: linear-gradient(135deg, #4A90E2, #357ABD);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -71,21 +75,81 @@ body {
 }
 
 .title {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     color: #7f8c8d;
     font-weight: 500;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    min-width: 250px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #555;
+    font-size: 0.9rem;
+}
+
+.contact-item i {
+    color: #4A90E2;
+    width: 16px;
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+.contact-item a {
+    color: #4A90E2;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-item a:hover {
+    color: #357ABD;
+}
+
+.contact-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    color: #4A90E2;
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: all 0.3s ease;
+    padding: 0.3rem 0.6rem;
+    border-radius: 15px;
+    background: rgba(74, 144, 226, 0.1);
+}
+
+.social-link:hover {
+    background: rgba(74, 144, 226, 0.2);
+    transform: translateY(-1px);
+}
+
+.social-link i {
+    font-size: 0.8rem;
 }
 
 /* Main Content Layout */
 .main-content {
     display: grid;
     grid-template-columns: 2fr 1fr;
-    gap: 3rem;
+    gap: 2rem;
 }
 
 /* Section Styles */
 .section {
-    margin-bottom: 2.5rem;
+    margin-bottom: 1.8rem;
 }
 
 .section-title {
@@ -119,10 +183,10 @@ body {
 /* Experience Styles */
 .experience-item {
     background: #f8f9fa;
-    border-radius: 12px;
-    padding: 1.5rem;
-    margin-bottom: 1.5rem;
-    border-left: 4px solid #4A90E2;
+    border-radius: 8px;
+    padding: 1.2rem;
+    margin-bottom: 1.2rem;
+    border-left: 3px solid #4A90E2;
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
@@ -421,9 +485,9 @@ body {
         border-radius: 15px;
     }
     
-    .main-content {
-        grid-template-columns: 1fr;
-        gap: 2rem;
+    .header {
+        flex-direction: column;
+        gap: 1.5rem;
     }
     
     .profile-section {
@@ -432,12 +496,26 @@ body {
         gap: 1rem;
     }
     
+    .contact-info {
+        min-width: auto;
+        width: 100%;
+    }
+    
+    .contact-links {
+        justify-content: center;
+    }
+    
+    .main-content {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
     .name {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
     
     .title {
-        font-size: 1.1rem;
+        font-size: 1rem;
     }
     
     .section-title {
@@ -446,8 +524,6 @@ body {
     
     .experience-item,
     .education-item,
-    .details,
-    .links,
     .skills,
     .hobbies {
         padding: 1rem;
@@ -465,6 +541,18 @@ body {
     
     .skill-bar {
         width: 100%;
+    }
+    
+    .exportButton,
+    .printButton {
+        right: 10px !important;
+        top: 10px !important;
+        padding: 8px 12px !important;
+        font-size: 0.8rem !important;
+    }
+    
+    .printButton {
+        right: 120px !important;
     }
 }
 
