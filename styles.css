@@ -155,12 +155,6 @@ body {
     padding-bottom: 5px;
 }
 
-/* Summary Section */
-.summary-text {
-    color: #555;
-    line-height: 1.6;
-    font-size: 14px;
-}
 
 /* Experience Section */
 .experience-item {
@@ -254,38 +248,6 @@ body {
     font-size: 14px;
 }
 
-/* Contact Information */
-.contact-details {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-}
-
-.contact-detail-item {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 14px;
-}
-
-.contact-detail-item .label {
-    font-weight: 500;
-    color: #2c3e50;
-    min-width: 60px;
-}
-
-.contact-detail-item .value {
-    color: #555;
-}
-
-.contact-detail-item a {
-    color: #4A90E2;
-    text-decoration: none;
-}
-
-.contact-detail-item a:hover {
-    text-decoration: underline;
-}
 
 /* Skills Section */
 .skills-list {
