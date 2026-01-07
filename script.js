@@ -7,14 +7,14 @@ document.addEventListener('DOMContentLoaded', function() {
         position: fixed;
         top: 20px;
         right: 20px;
-        background: #4A90E2;
+        background: #475569;
         color: white;
         border: none;
         padding: 10px 15px;
         border-radius: 20px;
         cursor: pointer;
-        font-weight: 500;
-        box-shadow: 0 3px 10px rgba(74, 144, 226, 0.3);
+        font-weight: 600;
+        box-shadow: 0 3px 10px rgba(71, 85, 105, 0.3);
         transition: all 0.3s ease;
         z-index: 1000;
         font-size: 12px;
@@ -40,12 +40,14 @@ document.addEventListener('DOMContentLoaded', function() {
     
     exportButton.addEventListener('mouseenter', function() {
         this.style.transform = 'scale(1.05)';
-        this.style.boxShadow = '0 5px 15px rgba(74, 144, 226, 0.4)';
+        this.style.background = '#334155';
+        this.style.boxShadow = '0 5px 15px rgba(71, 85, 105, 0.4)';
     });
     
     exportButton.addEventListener('mouseleave', function() {
         this.style.transform = 'scale(1)';
-        this.style.boxShadow = '0 3px 10px rgba(74, 144, 226, 0.3)';
+        this.style.background = '#475569';
+        this.style.boxShadow = '0 3px 10px rgba(71, 85, 105, 0.3)';
     });
     
     document.body.appendChild(exportButton);
@@ -113,7 +115,7 @@ document.addEventListener('DOMContentLoaded', function() {
         position: fixed;
         bottom: 20px;
         right: 20px;
-        background: #4A90E2;
+        background: #475569;
         color: white;
         border: none;
         width: 40px;
@@ -121,7 +123,7 @@ document.addEventListener('DOMContentLoaded', function() {
         border-radius: 50%;
         cursor: pointer;
         font-size: 14px;
-        box-shadow: 0 3px 10px rgba(74, 144, 226, 0.3);
+        box-shadow: 0 3px 10px rgba(71, 85, 105, 0.3);
         transition: all 0.3s ease;
         z-index: 1000;
         opacity: 0;
